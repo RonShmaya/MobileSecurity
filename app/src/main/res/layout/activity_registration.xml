@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.RegistrationActivity">
+
+
+    <ImageView
+        android:id="@+id/main_IMG_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f0d07d"
+        android:scaleType="centerCrop" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profile_TIL_username"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="15dp"
+                android:hint="Enter Username"
+                android:textColorHint="#555B6E"
+                app:boxStrokeColor="#555B6E"
+                app:boxStrokeWidth="2dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="15"
+                app:errorEnabled="true"
+                app:hintTextColor="#555B6E">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/profile_TIETL_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="30"
+                    android:imeOptions="actionDone"
+                    android:maxLength="15"
+                    android:outlineAmbientShadowColor="#555B6E"
+                    android:shadowColor="#555B6E"
+                    android:textColor="#555B6E" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profile_TIL_password"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="15dp"
+                android:hint="Enter Password"
+                android:textColorHint="#555B6E"
+                app:boxStrokeColor="#555B6E"
+                app:boxStrokeWidth="2dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="15"
+                app:errorEnabled="true"
+                app:hintTextColor="#555B6E">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/profile_TIETL_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="30"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLength="15"
+                    android:outlineAmbientShadowColor="#555B6E"
+                    android:shadowColor="#555B6E"
+                    android:textColor="#555B6E" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/createBar_CG_Terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:background="#f0d07d"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="#6CA19C9C" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_contact_name"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:text="Contact Term"
+                        app:checkedIcon="@drawable/ic_yes"
+                        android:textAlignment="center"
+                        android:textColor="#FAF9F9"
+                        app:checkedIconTint="#555B6E"
+                        app:chipBackgroundColor="#B7FF577F"
+                        app:chipIconEnabled="true" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/profile_TIL_contactname"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginEnd="30dp"
+                        android:hint="Enter Contact Name"
+                        android:textColorHint="#555B6E"
+                        app:boxStrokeColor="#555B6E"
+                        app:boxStrokeWidth="2dp"
+                        app:counterEnabled="true"
+                        app:counterMaxLength="15"
+                        app:errorEnabled="true"
+                        app:hintTextColor="#555B6E">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/profile_TIETL_contactname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="30"
+                            android:imeOptions="actionDone"
+                            android:maxLength="15"
+                            android:outlineAmbientShadowColor="#555B6E"
+                            android:shadowColor="#555B6E"
+                            android:textColor="#555B6E" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="#6CA19C9C" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_call"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        app:checkedIcon="@drawable/ic_yes"
+                        android:checked="false"
+                        android:text="Called Term"
+                        android:textAlignment="center"
+                        android:textColor="#FAF9F9"
+                        app:checkedIconTint="#555B6E"
+                        app:chipBackgroundColor="#B7FF577F"
+                        app:chipIconEnabled="true" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/profile_TIL_called"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="30dp"
+                        android:visibility="gone"
+                        android:hint="Enter Phone Call From Today"
+                        android:textColorHint="#555B6E"
+                        app:boxStrokeColor="#555B6E"
+                        app:boxStrokeWidth="2dp"
+                        app:counterEnabled="true"
+                        app:counterMaxLength="10"
+                        app:errorEnabled="true"
+                        app:hintTextColor="#555B6E">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/profile_TIETL_call"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="30"
+                            android:imeOptions="actionDone"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:outlineAmbientShadowColor="#555B6E"
+                            android:shadowColor="#555B6E"
+                            android:textColor="#555B6E" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="#6CA19C9C" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_battery_term"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:checked="false"
+                        android:text="Battery Term"
+                        android:textAlignment="center"
+                        android:textColor="#FAF9F9"
+                        android:textStyle="bold"
+                        app:checkedIcon="@drawable/ic_yes"
+                        app:checkedIconTint="#555B6E"
+                        app:chipBackgroundColor="#B7FF577F"
+                        app:chipIconEnabled="true" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/profile_TIL_batteryFrom"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            android:hint="From %"
+                            android:textColorHint="#555B6E"
+                            app:boxStrokeColor="#555B6E"
+                            app:boxStrokeWidth="2dp"
+                            app:hintTextColor="#555B6E">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/profile_ACTV_presentFrom"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="5dp"
+                                android:ems="30"
+                                android:inputType="none"
+                                android:outlineAmbientShadowColor="#555B6E"
+                                android:shadowColor="#555B6E"
+                                android:textColor="#555B6E" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/profile_TIL_batteryUntil"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            android:hint="Until %"
+                            android:textColorHint="#555B6E"
+                            app:boxStrokeColor="#555B6E"
+                            app:boxStrokeWidth="2dp"
+                            app:hintTextColor="#555B6E">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/profile_ACTV_presentUntil"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="30"
+                                android:inputType="none"
+                                android:outlineAmbientShadowColor="#555B6E"
+                                android:shadowColor="#555B6E"
+                                android:textColor="#555B6E" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="#6CA19C9C" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_location_term"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:checked="false"
+                        android:text="Location Radoius Term"
+                        android:textAlignment="center"
+                        android:textColor="#FAF9F9"
+                        android:textStyle="bold"
+                        app:checkedIcon="@drawable/ic_yes"
+                        app:checkedIconTint="#555B6E"
+                        app:chipBackgroundColor="#B7FF577F"
+                        app:chipIconEnabled="true" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/profile_TIL_addressCity"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="City"
+                                android:visibility="gone"
+                                android:textColorHint="#555B6E"
+                                app:boxStrokeColor="#555B6E"
+                                app:boxStrokeWidth="2dp"
+                                app:counterEnabled="true"
+                                app:counterMaxLength="15"
+                                app:errorEnabled="true"
+                                app:hintTextColor="#555B6E">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/profile_TIETL_addressCity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="30dp"
+                                    android:ems="30"
+                                    android:imeOptions="actionDone"
+                                    android:maxLength="15"
+                                    android:outlineAmbientShadowColor="#555B6E"
+                                    android:shadowColor="#555B6E"
+                                    android:textColor="#555B6E" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/profile_TIL_addressStreet"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:visibility="gone"
+                                    android:hint="Street"
+                                    android:textColorHint="#555B6E"
+                                    app:boxStrokeColor="#555B6E"
+                                    app:boxStrokeWidth="2dp"
+                                    app:counterEnabled="true"
+                                    app:counterMaxLength="15"
+                                    app:errorEnabled="true"
+                                    app:hintTextColor="#555B6E">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/profile_TIETL_addressStreet"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="30"
+                                        android:imeOptions="actionDone"
+                                        android:maxLength="15"
+                                        android:outlineAmbientShadowColor="#555B6E"
+                                        android:shadowColor="#555B6E"
+                                        android:textColor="#555B6E" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/profile_TIL_addressNum"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone"
+                                    android:layout_weight="1"
+                                    android:hint="Num"
+                                    android:textColorHint="#555B6E"
+                                    app:boxStrokeColor="#555B6E"
+                                    app:boxStrokeWidth="2dp"
+                                    app:counterEnabled="true"
+                                    app:counterMaxLength="3"
+                                    app:errorEnabled="true"
+                                    app:hintTextColor="#555B6E">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/profile_TIETL_addressNum"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:digits="0123456789"
+                                        android:ems="30"
+                                        android:imeOptions="actionDone"
+                                        android:inputType="number"
+                                        android:maxLength="3"
+                                        android:outlineAmbientShadowColor="#555B6E"
+                                        android:shadowColor="#555B6E"
+                                        android:textColor="#555B6E" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="#6CA19C9C" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:text="You Will Need To Remember The Sensor's Order"
+                        android:textColor="#555B6E"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_shake"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Shake Term"
+                        android:textAlignment="center"
+                        android:textColor="#FAF9F9"
+                        app:checkedIconTint="#555B6E"
+                        app:chipBackgroundColor="#B7FF577F"
+                        app:chipIconEnabled="true" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_flash"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Flash on Term"
+                        android:textAlignment="center"
+                        android:textColor="#FAF9F9"
+                        app:checkedIconTint="#555B6E"
+                        app:chipBackgroundColor="#B7FF577F"
+                        app:chipIconEnabled="true" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_proximity"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Proximity Term"
+                        android:textAlignment="center"
+                        android:textColor="#FAF9F9"
+                        app:checkedIconTint="#555B6E"
+                        app:chipBackgroundColor="#B7FF577F"
+                        app:chipIconEnabled="true" />
+
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_light"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Light Term"
+                        android:textAlignment="center"
+                        android:textColor="#FAF9F9"
+                        app:checkedIconTint="#555B6E"
+                        app:chipBackgroundColor="#B7FF577F"
+                        app:chipIconEnabled="true" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/profile_BTN_create"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:backgroundTint="#555B6E"
+                        android:text="Submit"
+                        android:textColor="#FAF9F9"
+                        android:textSize="15sp"
+                        app:checkedIconTint="@color/white"
+                        app:cornerRadius="20dp" />
+
+
+                </LinearLayout>
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/errors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text=""
+                android:textColor="#D81B60"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
